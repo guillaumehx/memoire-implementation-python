@@ -28,6 +28,8 @@ Vous pouvez chaîner les arguments par un espace : ```python3 main.py "6+2*(10/5
 -17
 ~~~~
 
+Pour exécuter les tests, lancez ```python3 -m unittest -v```
+
 ## Linux
 ### 1. Setup
 Ouvrez un terminal à la racine et vérifiez que Python 3 n'est pas déjà installé en lançant la commande : ```python3 --version```
@@ -43,6 +45,7 @@ Vous pouvez chaîner les arguments par un espace : ```python3 main.py "6+2*(10/5
 -17
 ~~~~
 
+Pour exécuter les tests, lancez ```python3 -m unittest -v```
 
 ## macOS
 ### 1. Setup
@@ -58,3 +61,5 @@ Vous pouvez chainer les arguments par un espace : ```python3 main.py "6+2*(10/5)
 4
 -17
 ~~~~
+
+Pour exécuter les tests, lancez ```python3 -m unittest -v```

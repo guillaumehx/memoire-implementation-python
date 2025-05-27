@@ -1,10 +1,10 @@
 import unittest
 from src.application.calculator import Calculator
 
-# python -m unittest -v
+# python3 -m unittest -v
 
 class TestCalculator(unittest.TestCase):
-    
+
     def setUp(self):
         self.calculator = Calculator()
     
