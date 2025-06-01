@@ -6,6 +6,9 @@ class ShuntingYard:
 
     @staticmethod
     def infixToRPN(expression: str) -> list:
+
+        expression = ShuntingYard.__preprocess(expression)
+
         output_queue = []
         operator_stack = []
 
@@ -31,3 +34,11 @@ class ShuntingYard:
             output_queue.append(operator_stack.pop())
 
         return output_queue
+    
+    @staticmethod
+    def __preprocess(expression: str) -> str:
+        expression = expression.replace(' ', '')
+        expression = re.sub(r'(\d)(\()', r'\1*\2', expression)
+        expression = re.sub(r'(\))(\d)', r'\1*\2', expression)
+        expression = re.sub(r'(\))(\()', r'\1*\2', expression)
+        return expression

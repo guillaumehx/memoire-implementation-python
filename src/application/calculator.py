@@ -9,7 +9,7 @@ class Calculator(HistoryMixin):
         self._parser = ExpressionParser()
         self._visitor = EvaluationVisitor()
 
-    def compute(self, expression):
+    def compute(self, expression) -> float:
         if isinstance(expression, str):
             ast = self._parser.parse(expression)
             result = ast.accept(self._visitor)

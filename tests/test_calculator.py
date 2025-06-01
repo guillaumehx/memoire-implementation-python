@@ -8,6 +8,13 @@ class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calculator = Calculator()
     
+    def test_implicit_operations(self):
+        self.assertEqual(self.calculator.compute("3(5)"), 15)
+        self.assertEqual(self.calculator.compute("(2+3)(4+1)"), 25)
+        self.assertEqual(self.calculator.compute("6 + (3+1)(2+2)"), 22)
+        self.assertEqual(self.calculator.compute("3+3(5)"), 18)
+        self.assertEqual(self.calculator.compute("(5)3+3"), 18)
+
     def test_simple_operations(self):
         self.assertEqual(self.calculator.compute("2+2*4"), 10)
         self.assertEqual(self.calculator.compute("(2+2)4"), 16)
